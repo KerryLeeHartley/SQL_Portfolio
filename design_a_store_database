@@ -1,0 +1,27 @@
+/* Create your own store! Your store should sell one type of things, like clothing or bikes,
+whatever you want your store to specialize in. You should have a table for all the items in your store, 
+and at least 5 columns for the kind of data you think you'd need to store. 
+You should sell at least 15 items, and use select statements to order your items by price and show at least one statistic about the items.*/
+
+
+CREATE TABLE store (id INTEGER PRIMARY KEY, name TEXT, color TEXT, price INTEGER, quantity INTEGER);
+
+INSERT INTO store VALUES (1, "Leash", "Red", 10, 7);
+INSERT INTO store VALUES (2, "Collar", "Blue", 15, 20);
+INSERT INTO store VALUES (3, "Dog Toy","Orange", 5, 50);
+INSERT INTO store VALUES (4, "Dog Bed", "Green", 40, 57);
+INSERT INTO store VALUES (5, "Dog Hat", "Purple", 7, 64);
+INSERT INTO store VALUES (6, "Dog Sweater", "Brown", 20, 25);
+INSERT INTO store VALUES (7, "Leash", "Red", 10, 74);
+INSERT INTO store VALUES (8, "Collar", "Red", 15, 85);
+INSERT INTO store VALUES (9, "Dog Toy", "Red", 5, 23);
+INSERT INTO store VALUES (10, "Dog Bed", "Red", 40, 12);
+INSERT INTO store VALUES (11, "Dog Hat", "Red", 7, 18);
+INSERT INTO store VALUES (12, "Dog Sweater", "Red", 20, 53);
+INSERT INTO store VALUES (13, "Leash", "Red", 10, 75);
+INSERT INTO store VALUES (14, "Collar", "Red", 15, 46);
+INSERT INTO store VALUES (15, "Dog Bed", "Red", 40, 38);
+ 
+ 
+SELECT * FROM store;
+SELECT * FROM store WHERE price > 15 ORDER BY price;
