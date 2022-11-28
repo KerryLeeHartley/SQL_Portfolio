@@ -1384,11 +1384,9 @@ SELECT * FROM players WHERE height < 6;
 
 /*Return the players who plays PG in the West Conference after 2000  */
 
-SELECT * FROM players WHERE height < 6 
-AND date > "Jan, 1, 2000"
-AND position = "PG"
-AND conference = "West";
-
-
-
-
+SELECT *,
+    CASE   
+        WHEN date > "Jan, 1, 2000" THEN "New ERA"
+    END AS "generation"
+FROM players
+GROUP BY season
